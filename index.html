@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ANOINT : GENESIS SCENT — Five Anointings. One Becoming.</title>
+<meta name="description" content="Five fragrances trace a masculine journey in five stages — vision, awakening, flow, maturation, transcendence. Prophet Encode, Dawn Aurora, Sovereign Nomad, Consensus Unity, Ascent Singularity." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b0a08;
+    --bone:#f2ede4;
+    --amber:#b8863a;
+    --teal:#1f4d47;
+    --tobacco:#5c3a24;
+    --gold:#c9a227;
+    --tone: var(--ink);
+    --tone-text: var(--bone);
+    --tone-text-dim: rgba(242,237,228,0.68);
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    margin:0;
+    background:var(--tone);
+    color:var(--tone-text);
+    font-family:'Space Grotesk', system-ui, sans-serif;
+    transition: background-color .7s ease, color .7s ease;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    body{ transition:none; }
+  }
+  h1,h2,h3, .eyebrow, .fragrance-name{ font-family:'Fraunces', serif; font-weight:500; }
+  a{ color:inherit; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 28px; }
+
+  /* body[data-tone] drives the whole-page background/text via --tone/--tone-text */
+  body[data-tone="bone"]{ --tone:var(--bone); --tone-text:var(--ink); --tone-text-dim:rgba(11,10,8,0.62); }
+  body[data-tone="amber"]{ --tone:var(--amber); --tone-text:var(--bone); --tone-text-dim:rgba(242,237,228,0.72); }
+  body[data-tone="teal"]{ --tone:var(--teal); --tone-text:var(--bone); --tone-text-dim:rgba(242,237,228,0.7); }
+  body[data-tone="tobacco"]{ --tone:var(--tobacco); --tone-text:var(--bone); --tone-text-dim:rgba(242,237,228,0.7); }
+  body[data-tone="ink"]{ --tone:var(--ink); --tone-text:var(--bone); --tone-text-dim:rgba(242,237,228,0.62); }
+
+  /* ---------- anointing thread (desktop: fixed left rail) ---------- */
+  .thread-rail{
+    position:fixed; left:34px; top:0; bottom:0; width:2px; z-index:20;
+    display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0;
+  }
+  .thread-rail .line{ position:absolute; top:8%; bottom:8%; width:2px; background:rgba(201,162,39,0.28); }
+  .thread-rail .orbs{ position:relative; display:flex; flex-direction:column; justify-content:space-between; height:76%; }
+  .thread-rail .orb{
+    width:10px; height:10px; border-radius:50%; background:var(--tone, var(--ink));
+    border:2px solid rgba(201,162,39,0.4); transform:translateX(-4px);
+    transition: background .4s ease, border-color .4s ease, box-shadow .4s ease;
+  }
+  .thread-rail .orb.active{
+    background:var(--gold); border-color:var(--gold);
+    box-shadow:0 0 12px 2px rgba(201,162,39,0.55);
+  }
+  @media (max-width:900px){
+    .thread-rail{ display:none; }
+  }
+
+  /* mobile: small inline dot row "behind" each section's eyebrow marker */
+  .mobile-thread{ display:none; gap:7px; margin-bottom:14px; }
+  .mobile-thread .dot{ width:6px; height:6px; border-radius:50%; background:rgba(201,162,39,0.3); transition:background .4s ease, box-shadow .4s ease; }
+  .mobile-thread .dot.active{ background:var(--gold); box-shadow:0 0 8px 1px rgba(201,162,39,0.6); }
+  @media (max-width:900px){ .mobile-thread{ display:flex; } }
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:80px 28px; position:relative;
+  }
+  .eyebrow{
+    font-size:13px; letter-spacing:0.28em; text-transform:uppercase; color:var(--gold);
+    margin-bottom:22px; font-weight:500;
+  }
+  .hero h1{ font-size:clamp(42px, 8vw, 92px); line-height:1.02; margin:0 0 24px; max-width:820px; }
+  .hero .subhead{ max-width:520px; color:var(--tone-text-dim); font-size:16.5px; line-height:1.65; margin:0 0 44px; }
+  .scroll-cue{
+    display:flex; flex-direction:column; align-items:center; gap:8px; font-size:11px;
+    letter-spacing:0.18em; text-transform:uppercase; color:var(--tone-text-dim);
+  }
+  .scroll-cue .stem{ width:1px; height:38px; background:linear-gradient(to bottom, var(--gold), transparent); animation:pulse-stem 2.2s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce){ .scroll-cue .stem{ animation:none; } }
+  @keyframes pulse-stem{ 0%,100%{ opacity:0.4; } 50%{ opacity:1; } }
+
+  /* ---------- fragrance sections ---------- */
+  .fragrance{
+    min-height:100svh; display:flex; flex-direction:column; justify-content:center;
+    padding:110px 28px; border-top:1px solid rgba(201,162,39,0.15);
+  }
+  .fragrance-inner{ max-width:760px; margin:0 auto; width:100%; }
+  .fragrance .index-eyebrow{ display:flex; align-items:baseline; gap:12px; margin-bottom:20px; }
+  .fragrance .index-num{ font-family:'Fraunces', serif; font-size:15px; color:var(--gold); letter-spacing:0.1em; }
+  .fragrance .stage-name{ font-size:12.5px; letter-spacing:0.24em; text-transform:uppercase; color:var(--tone-text-dim); }
+  .fragrance-name{ font-size:clamp(38px, 6.5vw, 68px); line-height:1.03; margin:0 0 14px; }
+  .strapline{ font-size:19px; font-style:italic; color:var(--tone-text-dim); margin:0 0 46px; max-width:480px; }
+
+  .notes-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; margin-bottom:34px; }
+  @media (max-width:640px){ .notes-grid{ grid-template-columns:1fr; gap:20px; } }
+  .notes-col .notes-label{
+    font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold);
+    margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(201,162,39,0.28);
+  }
+  .notes-col ul{ list-style:none; margin:0; padding:0; font-size:14.5px; line-height:1.9; color:var(--tone-text-dim); }
+
+  .comparable{ font-size:13px; color:var(--tone-text-dim); opacity:0.8; }
+  .comparable .label{ text-transform:uppercase; letter-spacing:0.1em; font-size:11px; margin-right:8px; }
+
+  /* ---------- closing ---------- */
+  .closing{
+    min-height:100svh; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; padding:100px 28px; border-top:1px solid rgba(201,162,39,0.15);
+  }
+  .closing h2{ font-size:clamp(30px, 5vw, 46px); line-height:1.2; max-width:680px; margin:0 0 22px; }
+  .closing .tagline{ font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:var(--gold); margin-bottom:44px; }
+  .cta{
+    display:inline-flex; align-items:center; gap:10px; background:var(--gold); color:var(--ink);
+    font-family:'Space Grotesk', sans-serif; font-weight:600; font-size:14px; letter-spacing:0.04em;
+    padding:16px 34px; border-radius:2px; text-decoration:none; border:1px solid var(--gold);
+    transition:background .2s ease, color .2s ease, transform .15s ease;
+  }
+  .cta:hover{ background:transparent; color:var(--gold); }
+  .cta:focus-visible, a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold); outline-offset:4px;
+  }
+</style>
+</head>
+<body data-tone="ink">
+
+<div class="thread-rail" aria-hidden="true">
+  <div class="line"></div>
+  <div class="orbs">
+    <div class="orb" data-orb="bone"></div>
+    <div class="orb" data-orb="amber"></div>
+    <div class="orb" data-orb="teal"></div>
+    <div class="orb" data-orb="tobacco"></div>
+    <div class="orb" data-orb="ink"></div>
+  </div>
+</div>
+
+<main>
+
+  <section class="hero" id="hero" data-tone="ink">
+    <div class="eyebrow">ANOINT &middot; GENESIS SCENT</div>
+    <h1>Five Anointings.<br>One Becoming.</h1>
+    <p class="subhead">
+      Five fragrances trace a masculine journey in five stages — vision, awakening, flow,
+      maturation, transcendence. Each one a marker on the way to who you're becoming.
+    </p>
+    <div class="scroll-cue"><span>Begin</span><span class="stem"></span></div>
+  </section>
+
+  <!-- 1 — Prophet Encode -->
+  <section class="fragrance" id="prophet" data-tone="bone">
+    <div class="fragrance-inner">
+      <div class="mobile-thread" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <div class="index-eyebrow">
+        <span class="index-num">01</span>
+        <span class="stage-name">Vision</span>
+      </div>
+      <h2 class="fragrance-name">Prophet Encode</h2>
+      <p class="strapline">&ldquo;Every man begins with a vision.&rdquo;</p>
+      <div class="notes-grid">
+        <div class="notes-col">
+          <div class="notes-label">Top</div>
+          <ul><li>Cinnamon</li><li>Nutmeg</li><li>Grapefruit</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Middle</div>
+          <ul><li>Lavender</li><li>Licorice</li><li>Cardamom</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Base</div>
+          <ul><li>Amberwood</li><li>Sandalwood</li><li>Patchouli</li><li>Cedar</li></ul>
+        </div>
+      </div>
+      <p class="comparable"><span class="label">In the spirit of</span>Dior Sauvage Elixir</p>
+    </div>
+  </section>
+
+  <!-- 2 — Dawn Aurora -->
+  <section class="fragrance" id="dawn" data-tone="amber">
+    <div class="fragrance-inner">
+      <div class="mobile-thread" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <div class="index-eyebrow">
+        <span class="index-num">02</span>
+        <span class="stage-name">Awakening</span>
+      </div>
+      <h2 class="fragrance-name">Dawn Aurora</h2>
+      <p class="strapline">&ldquo;Awaken. Illuminate. Rise.&rdquo;</p>
+      <div class="notes-grid">
+        <div class="notes-col">
+          <div class="notes-label">Top</div>
+          <ul><li>Grapefruit</li><li>Bergamot</li><li>Blackcurrant</li><li>Pink Pepper</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Middle</div>
+          <ul><li>Ginger</li><li>Cinnamon</li><li>Patchouli</li><li>Vetiver</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Base</div>
+          <ul><li>Musk</li><li>Ambergris</li><li>Birch</li><li>Tonka Bean</li></ul>
+        </div>
+      </div>
+      <p class="comparable"><span class="label">In the spirit of</span>Creed Aventus Absolu</p>
+    </div>
+  </section>
+
+  <!-- 3 — Sovereign Nomad -->
+  <section class="fragrance" id="sovereign" data-tone="teal">
+    <div class="fragrance-inner">
+      <div class="mobile-thread" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <div class="index-eyebrow">
+        <span class="index-num">03</span>
+        <span class="stage-name">Flow</span>
+      </div>
+      <h2 class="fragrance-name">Sovereign Nomad</h2>
+      <p class="strapline">&ldquo;Own yourself. Move with purpose.&rdquo;</p>
+      <div class="notes-grid">
+        <div class="notes-col">
+          <div class="notes-label">Top</div>
+          <ul><li>Marine Accord</li><li>Bergamot</li><li>Green Mandarin</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Middle</div>
+          <ul><li>Lavender</li><li>Cypress</li><li>Rosemary</li><li>Mastic</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Base</div>
+          <ul><li>Patchouli</li><li>Ambergris</li><li>Mineral Woods</li><li>Musk</li></ul>
+        </div>
+      </div>
+      <p class="comparable"><span class="label">In the spirit of</span>Armani Acqua di Gi&ograve; Profondo</p>
+    </div>
+  </section>
+
+  <!-- 4 — Consensus Unity -->
+  <section class="fragrance" id="consensus" data-tone="tobacco">
+    <div class="fragrance-inner">
+      <div class="mobile-thread" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <div class="index-eyebrow">
+        <span class="index-num">04</span>
+        <span class="stage-name">Maturation</span>
+      </div>
+      <h2 class="fragrance-name">Consensus Unity</h2>
+      <p class="strapline">&ldquo;Refine what you've built. Reflect what you've become.&rdquo;</p>
+      <div class="notes-grid">
+        <div class="notes-col">
+          <div class="notes-label">Top</div>
+          <ul><li>Cardamom</li><li>Rosewood</li><li>Chinese Pepper</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Middle</div>
+          <ul><li>Oud</li><li>Sandalwood</li><li>Vetiver</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Base</div>
+          <ul><li>Tonka Bean</li><li>Amber</li><li>Vanilla</li><li>Warm Musk</li></ul>
+        </div>
+      </div>
+      <p class="comparable"><span class="label">In the spirit of</span>Tom Ford Oud Wood</p>
+    </div>
+  </section>
+
+  <!-- 5 — Ascent Singularity -->
+  <section class="fragrance" id="ascent" data-tone="ink">
+    <div class="fragrance-inner">
+      <div class="mobile-thread" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      </div>
+      <div class="index-eyebrow">
+        <span class="index-num">05</span>
+        <span class="stage-name">Transcendence</span>
+      </div>
+      <h2 class="fragrance-name">Ascent Singularity</h2>
+      <p class="strapline">&ldquo;Light becomes timeless.&rdquo;</p>
+      <div class="notes-grid">
+        <div class="notes-col">
+          <div class="notes-label">Top</div>
+          <ul><li>Bitter Almond</li><li>Saffron</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Middle</div>
+          <ul><li>Egyptian Jasmine</li><li>Cedarwood</li><li>Ambergris</li></ul>
+        </div>
+        <div class="notes-col">
+          <div class="notes-label">Base</div>
+          <ul><li>Musk</li><li>Woody Accord</li><li>Labdanum</li><li>Roasted Vanilla</li></ul>
+        </div>
+      </div>
+      <p class="comparable"><span class="label">In the spirit of</span>Baccarat Rouge 540 Extrait de Parfum</p>
+    </div>
+  </section>
+
+  <section class="closing" id="closing" data-tone="ink">
+    <h2>Five scents. Five virtues.<br>One timeless expression of man.</h2>
+    <div class="tagline">Timeless. Elemental. Masculine.</div>
+    <a class="cta" href="#hero">Get Notified</a>
+  </section>
+
+</main>
+
+<script>
+  (function(){
+    var body = document.body;
+    var orbs = Array.prototype.slice.call(document.querySelectorAll('.thread-rail .orb'));
+    var mobileDotGroups = Array.prototype.slice.call(document.querySelectorAll('.mobile-thread'));
+    var orbToneOrder = ['bone','amber','teal','tobacco','ink']; // the 5 rail orbs, in journey order
+
+    // isFragrance distinguishes the 5 named fragrance sections from hero/closing — hero and
+    // Ascent Singularity's closing bookend both happen to share the "ink" tone (Ascent's own
+    // tone doubles as the base background, per the spec), but the rail's orbs track progress
+    // through the 5 fragrances specifically, so hero/closing must clear every orb rather than
+    // lighting the "ink" one — otherwise the last orb looks lit before the visitor has scrolled
+    // at all.
+    function setActive(tone, isFragrance){
+      body.dataset.tone = tone;
+      var activeIdx = isFragrance ? orbToneOrder.indexOf(tone) : -1;
+      orbs.forEach(function(orb, i){
+        orb.classList.toggle('active', i === activeIdx);
+      });
+      mobileDotGroups.forEach(function(group){
+        var dots = group.querySelectorAll('.dot');
+        dots.forEach(function(dot, i){ dot.classList.toggle('active', i === activeIdx); });
+      });
+    }
+
+    // "section[data-tone]", not the bare "[data-tone]" — body itself also carries a data-tone
+    // attribute (as the initial/fallback state), and the universal selector would pull it into
+    // this same observed set, firing setActive() off body's own (constant, page-spanning)
+    // intersection state alongside the real sections.
+    var sections = Array.prototype.slice.call(document.querySelectorAll('section[data-tone]'));
+    // rootMargin shrinks the observation band to a horizontal slice through the viewport center,
+    // so a section only counts as "active" once it's roughly the dominant thing on screen —
+    // avoids flickering between two sections while one is merely scrolling past the very edge
+    var observer = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting) setActive(entry.target.dataset.tone, entry.target.classList.contains('fragrance'));
+      });
+    }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+
+    sections.forEach(function(s){ observer.observe(s); });
+  })();
+</script>
+
+</body>
+</html>
