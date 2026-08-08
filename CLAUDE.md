@@ -51,9 +51,17 @@ page's sensory copy, not an actual formulation** — an actual perfumer/fragranc
 to develop each juice's real formula. Updated once already (2026-08-08) when a revised spec swapped
 in Fragrantica-sourced notes for what had been a more invented-feeling list, and changed 3 of the 5
 comparables (Prophet → Bleu de Chanel EDP, Consensus → Tom Ford Tobacco Vanille, Ascent → Nishane
-Hacivat); Dawn Aurora's comparable stayed Creed Aventus Absolu across both versions. If the spec
-changes again, update all three of: the copied spec file, `index.html`'s five `notes-grid`s, and
-this note.
+Hacivat); Dawn Aurora's comparable stayed Creed Aventus Absolu across both versions.
+
+Updated again same day (2026-08-08) to align 3 of the 5 stages with a seasonal read (Dawn Aurora =
+Spring, Sovereign Nomad = Summer, Consensus Unity = Autumn, Ascent Singularity = Winter; Prophet
+Encode has no season, it's the pre-cycle start). Comparables and their note pyramids were rotated
+rather than reassigned independently: Creed Aventus Absolu moved Dawn → Consensus (its notes went
+with it), Tom Ford Tobacco Vanille moved Consensus → Ascent (same), and Nishane Hacivat was dropped
+entirely, replaced at Dawn by Terre d'Hermès EDT (Fragrantica-sourced: Orange, Grapefruit / Pepper,
+Pelargonium, Flint / Patchouli, Cedar, Vetiver, Benzoin). Sovereign Nomad and Prophet Encode were
+untouched. If the spec changes again, update all three of: the copied spec file, `index.html`'s
+five `notes-grid`s, and this note.
 
 ## Icon glyph (`.section-icon`)
 

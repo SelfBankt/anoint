@@ -17,10 +17,12 @@ Colour arc (this is the spine of the whole design):
 | # | Name | Stage | Tone | Notes (top / middle / base) | Comparable |
 |---|------|-------|------|------------------------------|------------|
 | 1 | Prophet Encode | Vision | White `#f2ede4` | Grapefruit, Lemon, Mint, Bergamot, Pink Pepper, Coriander / Ginger, Jasmine, Nutmeg, Melon / Incense, Amber, Cedar, Sandalwood, Amberwood, Patchouli, Labdanum | Bleu de Chanel EDP |
-| 2 | Dawn Aurora | Awakening | Amber `#b8863a` | Grapefruit, Bergamot, Pink Pepper, Black Currant, Pineapple, Nutmeg, Cloves / Ginger, Cinnamon, Citron, Cardamom, Rose / Patchouli, Vetiver, Oakmoss, Sandalwood, Musk, Tonka Bean | Creed Aventus Absolu |
+| 2 | Dawn Aurora | Awakening | Amber `#b8863a` | Orange, Grapefruit / Pepper, Pelargonium, Flint / Patchouli, Cedar, Vetiver, Benzoin | Terre d'Hermès EDT |
 | 3 | Sovereign Nomad | Flow | Teal `#1f4d47` | Sea Notes, Green Mandarin / Rosemary, Lavender / Mineral Notes, Ambergris, Musk, Cedar, Patchouli | Acqua di Giò Profondo EDP |
-| 4 | Consensus Unity | Maturation | Tobacco `#5c3a24` | Tobacco Leaf, Spicy Notes / Vanilla, Cacao, Tonka Bean, Tobacco Blossom / Dried Fruits, Woody Notes | Tom Ford Tobacco Vanille |
-| 5 | Ascent Singularity | Transcendence | Black `#0b0a08` | Pineapple, Grapefruit, Bergamot / Cedar, Patchouli, Jasmine / Oakmoss, Woody Notes | Nishane Hacivat |
+| 4 | Consensus Unity | Maturation | Tobacco `#5c3a24` | Grapefruit, Bergamot, Pink Pepper, Black Currant, Pineapple, Nutmeg, Cloves / Ginger, Cinnamon, Citron, Cardamom, Rose / Patchouli, Vetiver, Oakmoss, Sandalwood, Musk, Tonka Bean | Creed Aventus Absolu |
+| 5 | Ascent Singularity | Transcendence | Black `#0b0a08` | Tobacco Leaf, Spicy Notes / Vanilla, Cacao, Tonka Bean, Tobacco Blossom / Dried Fruits, Woody Notes | Tom Ford Tobacco Vanille |
+
+Each stage also maps to a season for orientation purposes (not shown on the page itself): Dawn Aurora = Spring, Sovereign Nomad = Summer, Consensus Unity = Autumn, Ascent Singularity = Winter. Prophet Encode (Vision) has no season — it's the pre-cycle starting point. The three comparables above (rows 2, 4, 5) were rotated 2026-08-08 to match this seasonal read: Creed Aventus Absolu moved from Dawn Aurora to Consensus Unity (Autumn), Tom Ford Tobacco Vanille moved from Consensus Unity to Ascent Singularity (Winter), and Terre d'Hermès EDT was newly brought in for Dawn Aurora (Spring), replacing Nishane Hacivat, which was dropped. Notes sourced from Fragrantica (accessed Aug 2026).
 
 Note pyramids above are sourced from Fragrantica's public listings for each reference fragrance (accessed Aug 2026) — treat them as directional inspiration for the brief, not a formulation spec. A real perfumer/fragrance house will need to develop each juice's actual formula; these note lists exist to keep the copy (and the design's sensory language) honest to what each reference actually smells like.
 
