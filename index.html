@@ -104,7 +104,10 @@
   .strapline{ font-size:19px; font-style:italic; color:var(--tone-text-dim); margin:0 auto 46px; max-width:480px; }
 
   .notes-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:28px; margin-bottom:34px; }
-  @media (max-width:640px){ .notes-grid{ grid-template-columns:1fr; gap:20px; } }
+  @media (max-width:640px){
+    .notes-grid{ grid-template-columns:1fr; gap:20px; }
+    .notes-col ul{ display:grid; grid-template-columns:repeat(2, 1fr); gap:6px 10px; text-align:center; }
+  }
   .notes-col .notes-label{
     font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold);
     margin-bottom:10px; padding-bottom:8px; border-bottom:1px solid rgba(201,162,39,0.28);
