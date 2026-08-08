@@ -16,11 +16,13 @@ Colour arc (this is the spine of the whole design):
 
 | # | Name | Stage | Tone | Notes (top / middle / base) | Comparable |
 |---|------|-------|------|------------------------------|------------|
-| 1 | Prophet Encode | Vision | White `#f2ede4` | Cinnamon, Nutmeg, Grapefruit / Lavender, Licorice, Cardamom / Amberwood, Sandalwood, Patchouli, Cedar | Dior Sauvage Elixir |
-| 2 | Dawn Aurora | Awakening | Amber `#b8863a` | Grapefruit, Bergamot, Blackcurrant, Pink Pepper / Ginger, Cinnamon, Patchouli, Vetiver / Musk, Ambergris, Birch, Tonka Bean | Creed Aventus Absolu |
-| 3 | Sovereign Nomad | Flow | Teal `#1f4d47` | Marine Accord, Bergamot, Green Mandarin / Lavender, Cypress, Rosemary, Mastic / Patchouli, Ambergris, Mineral Woods, Musk | Armani Acqua di Giò Profondo |
-| 4 | Consensus Unity | Maturation | Tobacco `#5c3a24` | Cardamom, Rosewood, Chinese Pepper / Oud, Sandalwood, Vetiver / Tonka Bean, Amber, Vanilla, Warm Musk | Tom Ford Oud Wood |
-| 5 | Ascent Singularity | Transcendence | Black `#0b0a08` | Bitter Almond, Saffron / Egyptian Jasmine, Cedarwood, Ambergris / Musk, Woody Accord, Labdanum, Roasted Vanilla | Baccarat Rouge 540 Extrait de Parfum |
+| 1 | Prophet Encode | Vision | White `#f2ede4` | Grapefruit, Lemon, Mint, Bergamot, Pink Pepper, Coriander / Ginger, Jasmine, Nutmeg, Melon / Incense, Amber, Cedar, Sandalwood, Amberwood, Patchouli, Labdanum | Bleu de Chanel EDP |
+| 2 | Dawn Aurora | Awakening | Amber `#b8863a` | Grapefruit, Bergamot, Pink Pepper, Black Currant, Pineapple, Nutmeg, Cloves / Ginger, Cinnamon, Citron, Cardamom, Rose / Patchouli, Vetiver, Oakmoss, Sandalwood, Musk, Tonka Bean | Creed Aventus Absolu |
+| 3 | Sovereign Nomad | Flow | Teal `#1f4d47` | Sea Notes, Green Mandarin / Rosemary, Lavender / Mineral Notes, Ambergris, Musk, Cedar, Patchouli | Acqua di Giò Profondo EDP |
+| 4 | Consensus Unity | Maturation | Tobacco `#5c3a24` | Tobacco Leaf, Spicy Notes / Vanilla, Cacao, Tonka Bean, Tobacco Blossom / Dried Fruits, Woody Notes | Tom Ford Tobacco Vanille |
+| 5 | Ascent Singularity | Transcendence | Black `#0b0a08` | Pineapple, Grapefruit, Bergamot / Cedar, Patchouli, Jasmine / Oakmoss, Woody Notes | Nishane Hacivat |
+
+Note pyramids above are sourced from Fragrantica's public listings for each reference fragrance (accessed Aug 2026) — treat them as directional inspiration for the brief, not a formulation spec. A real perfumer/fragrance house will need to develop each juice's actual formula; these note lists exist to keep the copy (and the design's sensory language) honest to what each reference actually smells like.
 
 One-line hooks (use as section straplines, don't invent new ones):
 1. Prophet Encode — "Every man begins with a vision."

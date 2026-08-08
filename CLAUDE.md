@@ -41,6 +41,20 @@ product — it predates this spec, doesn't reflect the 5-fragrance-as-distinct-p
 wasn't used as a basis for this build. If a real checkout is wanted later, treat that as new scope
 to spec out properly rather than grafting the old prototype's approach onto this page.
 
+## Note pyramids are reference-fragrance research, not a formula
+
+Each fragrance's Top/Middle/Base notes and its "In the spirit of" comparable (in `index.html`'s
+five `.fragrance` sections) come from the spec's table, which was itself sourced from Fragrantica's
+public listings for each named reference fragrance (accessed Aug 2026) — see
+`anoint-genesis-scent-build-spec.md`. They're **directional inspiration for the brief and the
+page's sensory copy, not an actual formulation** — an actual perfumer/fragrance house still needs
+to develop each juice's real formula. Updated once already (2026-08-08) when a revised spec swapped
+in Fragrantica-sourced notes for what had been a more invented-feeling list, and changed 3 of the 5
+comparables (Prophet → Bleu de Chanel EDP, Consensus → Tom Ford Tobacco Vanille, Ascent → Nishane
+Hacivat); Dawn Aurora's comparable stayed Creed Aventus Absolu across both versions. If the spec
+changes again, update all three of: the copied spec file, `index.html`'s five `notes-grid`s, and
+this note.
+
 ## Design
 
 Deliberately avoids both the cream/terracotta AI-default palette and a near-black-with-one-neon
